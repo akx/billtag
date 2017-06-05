@@ -84,6 +84,7 @@ def main():
         data = list(read_tsv(infp))
     processed = process(data, rounding=args.rounding)
     print_itemization(processed)
+    print('[>] Total price: %s' % processed['total_split_price'])
     rounding_remainder = processed['total_price'] - processed['total_split_price']
     if rounding_remainder:
         print('[*] Rounding remainder: %s' % rounding_remainder)
