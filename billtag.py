@@ -3,6 +3,7 @@ import re
 from collections import Counter, defaultdict
 from decimal import Decimal
 from fractions import Fraction
+from itertools import chain
 from operator import itemgetter
 
 
@@ -24,8 +25,9 @@ def fraction_as_decimal(value):
     return Decimal(value.numerator) / Decimal(value.denominator)
 
 
-def process(data):
+def process(data, rounding=2):
     by_tag = defaultdict(list)
+    total_price = 0
     for line in data:
         qty = int(line['qty'])
         if 'total' in line:
@@ -34,6 +36,7 @@ def process(data):
             line_price = parse_decimal(line['unit']) * qty
         else:
             raise NotImplementedError('no total or unit in line %r' % line)
+        total_price += line_price
         name = line['name']
         tags = Counter(line['tags'])
         total_tags = sum(tags.values())
@@ -46,32 +49,44 @@ def process(data):
                 'total_qty': qty,
                 'split_qty': (share * qty),
                 'total_price': line_price,
-                'split_price': Decimal(float(share)) * line_price,
+                'split_price': round(Decimal(float(share)) * line_price, rounding),
             })
-    return by_tag
+
+    return {
+        'by_tag': by_tag,
+        'total_price': total_price,
+        'total_split_price': sum(i['split_price'] for i in chain(*by_tag.values())),
+    }
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument('input')
-    args = ap.parse_args()
-    with open(args.input) as infp:
-        data = list(read_tsv(infp))
-    by_tag = process(data)
-    for tag, tag_items in sorted(by_tag.items()):
+def print_itemization(processed):
+    for tag, tag_items in sorted(processed['by_tag'].items()):
         total_price = sum(item['split_price'] for item in tag_items)
         total_qty = sum(item['split_qty'] for item in tag_items)
         header_line = '%s: %s items, total split price %.2f' % (tag, fraction_as_decimal(total_qty), total_price)
-        print()
         print(header_line)
         print('=' * len(header_line))
         name_len = max(len(item['name']) for item in tag_items)
         for item in sorted(tag_items, key=itemgetter('name')):
-            print('%-*s %4s .. %6s' % (
+            print('%-*s | %4s | %6s' % (
                 name_len, item['name'],
                 item['split_qty'],
                 item['split_price'],
             ))
+        print()
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('input')
+    ap.add_argument('-r', '--rounding', default=2, type=int)
+    args = ap.parse_args()
+    with open(args.input) as infp:
+        data = list(read_tsv(infp))
+    processed = process(data, rounding=args.rounding)
+    print_itemization(processed)
+    rounding_remainder = processed['total_price'] - processed['total_split_price']
+    if rounding_remainder:
+        print('[*] Rounding remainder: %s' % rounding_remainder)
 
 
 if __name__ == '__main__':
