@@ -91,7 +91,7 @@ def print_itemization(processed):
     for tag, tag_items in sorted(processed['by_tag'].items()):
         total_price = sum(item['split_price'] for item in tag_items)
         total_qty = sum(item['split_qty'] for item in tag_items)
-        header_line = '%s: %s items, total split price %.2f' % (tag, fraction_as_decimal(total_qty), total_price)
+        header_line = '%s: %s items, total split price %.2f' % (tag, round(fraction_as_decimal(total_qty), 3), total_price)
         print(header_line)
         print('=' * len(header_line))
         name_len = max(len(item['name']) for item in tag_items)
