@@ -43,6 +43,8 @@ def process(data, rounding=2, currency_multiplier=1):
             discount_mul = 1 - parse_decimal(line['discount'])
             line_price *= discount_mul
         line_price *= currency_multiplier
+        if line_price == 0:
+            raise NotImplementedError('price of line %r equals 0' % line)
         total_price += line_price
         name = line['name']
         tags = Counter(line['tags'])
