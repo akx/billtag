@@ -39,6 +39,9 @@ def process(data, rounding=2, currency_multiplier=1):
             line_price = parse_decimal(line['unit']) * qty
         else:
             raise NotImplementedError('no total or unit in line %r' % line)
+        if 'discount' in line:
+            discount_mul = 1 - parse_decimal(line['discount'])
+            line_price *= discount_mul
         line_price *= currency_multiplier
         total_price += line_price
         name = line['name']
