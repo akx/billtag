@@ -1,0 +1,19 @@
+tags	name	unit	qty	total	discount
+a	Prototype Challenge 2017 Set  - (Mixed Case)	£7.50	1	£7.50	0.10
+r	Dugges - Mango Mango Mango (w/ Stillwater)  - (330ml Bottle)	£5.00	1	£5.00	0.10
+ar	Dugges - Cocoa Cacao (w/ Stillwater)  - (330ml Bottle)	£8.00	2	£16.00	0.10
+a	Pressure Drop - Verlangen  - (330ml Bottle)	£2.40	1	£2.40	0.10
+a	Pressure Drop - Nanban Kanpai  - (330ml Bottle)	£2.40	1	£2.40	0.10
+a	Pressure Drop - Wallbanger  - (330ml Bottle)	£2.10	2	£4.20	0.10
+a	Pressure Drop - Bosko IPA  - (330ml Bottle)	£3.50	1	£3.50	0.10
+a	Pressure Drop - Pale Fire  - (330ml Bottle)	£3.00	1	£3.00	0.10
+ar	EFP Exclusive: LoneWolf G&T 6 cans  - (6x330ml cans)	£14.00	1	£14.00	0.10
+a	Slot Machine Bomber  - (660ml Bottle)	£4.20	1	£4.20	0.10
+r	To Øl - LemonGrass Gose  - (500ml Can)	£3.50	1	£3.50	0.10
+a	Brew By Numbers - 21|13 Pale Ale - Mandarina & Loral  - (330ml Bottle)	£2.60	1	£2.60	0.10
+a	Brew By Numbers - 21|12 Pale Ale Ekuanot Rakau Wai-iti  - (330ml Bottle)	£2.60	1	£2.60	0.10
+a	Stillwater - Super Hop  - (475ml Can)	£5.79	1	£5.79	0.10
+r	Stillwater - Gose Gone Wild World Tour Phuket  - (660ml Bottle)	£8.50	1	£8.50	0.10
+r	Alesmith - Nut Brown  - (355ml Bottle)	£3.70	1	£3.70	0.10
+ar	Beavertown - Smog Rocket cans  - (330ml Can)	£3.00	2	£6.00	0.10
+r	Abstrakt AB:22  - (375ml Bottle)	£10.00	1	£10.00	0.10

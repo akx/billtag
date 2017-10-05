@@ -1,0 +1,24 @@
+tags	name	unit	qty	total	discount
+a	Nine to Five Wizard - (330ml Can)	£3.00	2	£6.00	0.10
+a	Electric India Cans - (330ml Can)	£1.80	2	£3.60	0.10
+a	Hazy Jane cans - (330ml Can)	£3.00	2	£6.00	0.10
+a	Amundsen - Mad Flow - (330ml Can)	£3.20	2	£6.40	0.10
+ar	Amundsen - Beerfoot Saison - (330ml Can)	£2.50	2	£5.00	0.10
+a	Mike Hess - Habitus - (473ml Can)	£5.00	1	£5.00	0.10
+r	Fierce Beer - Tangerine Tart - (330ml Bottle)	£3.25	1	£3.25	0.10
+a	Coronado - Guava Islander Cans - (355ml Can)	£3.80	1	£3.80	0.10
+a	Coronado - Stingray IPA Cans - (355ml Can)	£4.50	1	£4.50	0.10
+a	Coronado - CoastWise Session IPA Cans - (355ml Can)	£3.50	1	£3.50	0.10
+r	Gipsy Hill - Schunkeln - (330ml Bottle)	£3.10	2	£6.20	0.10
+ar	Cloudwater - Wit Loral - (440ml can)	£4.20	2	£8.40	0.10
+ar	Mikkeller - Beer Geek Flat White cans - (500ml Can)	£9.00	2	£18.00	0.10
+a	Beavertown - Lupuloid - (330ml Can)	£2.90	2	£5.80	0.10
+ar	Dugges - Sidamo Dimtu - (330ml Bottle)	£9.00	2	£18.00	0.10
+ar	Jolly Pumpkin - Fuego del Otono Vintage 2014 - (750ml Bottle)	£15.00	1	£15.00	0.10
+a	Wild Beer Co - Pogo Cans - (330ml Can)	£2.50	2	£5.00	0.10
+r	Jolly Pumpkin - Bam Biere - (375ml bottle)	£7.50	1	£7.50	0.10
+r	Jolly Pumpkin - Oro de Calabaza - (750ml bottle)	£15.00	1	£15.00	0.10
+r	Alesmith Speedway Stout - (473ml Can)	£12.00	1	£12.00	0.10
+r	Burning Sky - Saison a la Provision - (330ml Bottle)	£5.30	1	£5.30	0.10
+a	Pump Action Poet cans - (330ml Can)	£3.00	2	£6.00	0.10
+ar	Shipping	£15	1	£15

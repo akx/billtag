@@ -1,0 +1,24 @@
+tags	name	qty	total
+a	IPA Box	1	37.53 €
+a	Lervig Perler For Svin IPA	1	0
+a	Dry & Bitter Fat & Fruity IPA	1	0
+a	Mikkeller 19 IPA	1	0
+a	Gamma Ionize Double IPA	1	0
+a	Uiltje Bird of Prey IPA	1	0
+a	Flying Dog Fever Dream: Mango Habanero IPA	1	0
+a	Brewski Barbarian IPA	1	0
+a	Dugges High Five! IPA	1	0
+r	Stout and Porter Box	1	60.39 €
+r	Lervig Konrads Imperial Stout	1	0
+r	Nøgne Ø Porter	1	0
+r	Latitude 42 Lucifer's Cuvée Double Chocolate Stout	1	0
+r	Founders KBS Kentucky Breakfast Stout (2016 release)	1	0
+r	Tempest Double Shuck Imperial Oyster Stout	1	0
+r	Omnipollo Selassie Imperial Stout	1	0
+r	Mikkeller Beer Geek Vanilla Maple Shake Imperial Stout	1	0
+r	Prairie Artisan Ales Bomb! Imperial Stout	1	0
+ar	Mikkeller Hallo Ich Bin Berliner Weisse Watermellon	2	11.30 €
+ar	To Øl Pineapple Express BA (29 KT) Cognac & whiskey Imperial Stout	2	16.68 €
+r	Leelanau Illuminati V2 Antidogma Imperial Stout BA Bourbon (37 cl.)	1	15.47 €
+a	Omnipollo Hypnopompa Marshmallow Imperial Stout	1	10.63 €
+

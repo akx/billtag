@@ -1,0 +1,10 @@
+
+# Parse Brewdog mail
+
+Inspect the table element that contains the order contents, then `t = $0`.
+
+Then run:
+
+```
+Array.from(t.querySelectorAll('tr')).map((r) => Array.from(r.querySelectorAll('td')).map(c => c.innerText.trim().replace('\n', ' - ')).join('\t')).join('\n')
+```

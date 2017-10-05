@@ -1,0 +1,31 @@
+tags	name	qty	total
+a	American Solera Old Dishoom	1	11.97 €
+r	Black Barrels Nut-The Irish Jinn Sour	1	13.32 €
+ar	Brewfist Spaghetti Western Grappa Barrel	2	12.11 €
+a	Council Béatitude Prickly Pear Tart Saison (75 cl.)	1	17.35 €
+a	Crooked Stave L’Brett d’Apricot	1	14.66 €
+ar	Evil Twin / Two Roads Pachamama Porter w/ Peruvian food	2	7.80 €
+ar	Evil Twin I Love You With My Stout Imperial Stout	2	9.42 €
+ar	Evil Twin Imperial Biscotti Break (Can)	2	10.49 €
+ar	Evil Twin Liquid Double Fudge Imperial Stout	2	20.18 €
+r	Evil Twin Mission Gose	1	3.36 €
+r	Fantôme Chocolat Saison (75 cl.)	1	11.43 €
+r	Fantôme Saison	1	10.09 €
+a	Fourpure Juicebox Citrus IPA	1	5.92 €
+ar	Hoppin’ Frog / Siren 5-Alarm Chili Beer: American Style	2	21.25 €
+ar	Hoppin’ Frog / To Øl Scandinavian Sour Imperial Stout	2	23.94 €
+r	Hoppin’ Frog King Gose Home	1	6.59 €
+a	Hoppin’ Frog Silk Porter	1	7.94 €
+ar	Kuro OWA Grand Cru 2015 (75 cl.)	1	20.04 €
+ar	La Pirata / De Molen Smashing & Grapes Grisette	2	9.68 €
+a	La Pirata / Les Trois Mousquetaires Barcelona Tropical IPA	1	5.11 €
+r	Lervig/Oud Beersel Black Acid Stout/Lambic BA Akevitt	1	6.59 €
+r	Libertine Coffeetine Sour (75. cl.)	1	24.08 €
+ar	Midtfyns Bryghus Chili Klaus Ghost (33 cl.)	2	10.22 €
+ar	Mike Hess 8 West Honey Orange Wheat	2	7.80 €
+ar	Mike Hess Claritas Kölsch	2	7.80 €
+a	Northern Monk /Lonely Planet / Fieldwork Travel Notes IPA	1	6.19 €
+a	Pizza Port Kook Double IPA (47.3 cl.)	1	5.25 €
+a	Pizza Port Ponto Sessionable India Pale Ale (50 cl.)	1	3.90 €
+ar	Tempest Mexicake Imperial Stout	2	11.84 €
+a	Uiltje The Juice Was Worth the Squeeze New England Style IPA	1	5.11 €
