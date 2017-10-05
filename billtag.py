@@ -29,7 +29,10 @@ def process(data, rounding=2, currency_multiplier=1):
     by_tag = defaultdict(list)
     total_price = 0
     for line in data:
-        qty = int(line['qty'])
+        try:
+            qty = int(line['qty'])
+        except:
+            raise NotImplementedError('invalid qty in line %r' % line)
         if 'total' in line:
             line_price = parse_decimal(line['total'])
         elif 'unit' in line:
