@@ -52,7 +52,7 @@ def process(data, rounding=2, currency_multiplier=1, delivery=0):
         total_tags = sum(tags.values())
         for tag, count in tags.items():
             share = Fraction(count, total_tags)
-            tag_shares[tag] += share
+            tag_shares[tag] += share * qty
             by_tag[tag].append({
                 'line': line,
                 'name': name,
