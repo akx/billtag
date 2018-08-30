@@ -1,0 +1,17 @@
+tags	name	x	qty	total	discount
+r	Magic Rock - Bearded Lady Dessert Edition (Hazelnut)  - (330ml Can)	£5.00	2	£10.00	0.2
+r	Stone Berlin - White Ghost  - (330ml Can)	£2.40	6	£14.40	0.2
+r	Magic Rock - Fantasma  - (330ml Bottle)	£2.80	4	£11.20	0.2
+r	Magic Rock - Salty Kiss Cans  - (330ml Can)	£2.50	2	£5.00	0.2
+r	Magic Rock - High Wire Grapefruit cans  - (330ml Can)	£2.50	2	£5.00	0.2
+r	Northern Monk - Northern Star  - (330ml Can)	£3.00	4	£12.00	0.2
+r	Restorative Beverage for Invalids and Convalescents  - (3 x 330ml Cans)	£9.00	1	£9.00	0.2
+r	Elvis Juice Cans  - (330ml Can)	£2.50	3	£7.50	0.2
+r	Fanzine Issue 6  - (Issue 6)	£11.00	2	£22.00	0.0
+x	Wiper & True - Milk Shake  - (330ml Bottle)	£2.60	1	£2.60	0.2
+x	Mantra - Japa  - (355ml Bottle)	£3.00	1	£3.00	0.2
+x	Hi-Wire - Bed of Nails  - (355ml Bottle)	£3.00	1	£3.00	0.2
+x	To Øl - Fuck Art - We've Got Zestappeal  - (500ml Can)	£4.30	1	£4.30	0.2
+x	To Øl - Sur Mosaic  - (330ml Bottle)	£4.20	1	£4.20	0.2
+x	Siren - CapHeine  - (330ml Bottle)	£3.20	1	£3.20	0.2
+x	Wild Beer Co - Squashed Grape  - (750ml Bottle)	£9.00	1	£9.00	0.2

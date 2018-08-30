@@ -1,0 +1,6 @@
+tags	name	qty	total	discount
+a	Hello My Name Is Case  - (Mixed Case)	18	£57.00	0.2
+ar	Siren - Rum Coffee Broken Dream  - (330ml Bottle)	2	£6.00	0.2
+r	Haand - Drofn Gose  - (330ml Bottle)	1	£2.00	0.2
+r	Kernel - Export Stout  - (330ml Bottle)	1	£3.00	0.2
+ar	Haand - Batch #1000  - (330ml Bottle)	2	£14.00	0.2

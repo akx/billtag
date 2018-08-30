@@ -1,0 +1,23 @@
+tags	name	x	qty	total	discount
+ar	Jackie O's - Pockets of Sunlight  - (500ml Bottle)	£12.00	1	£12.00	0.2
+a	Siren - Ryesing Tides  - (330ml Bottle)	£4.00	1	£4.00	0.2
+a	Tiny Rebel - Clwb Tropicana  - (330ml Can)	£2.60	1	£2.60	0.2
+r	To Øl - #YOLOMælk  - (500ml Can)	£9.60	1	£9.60	0.2
+a	Mad Hatter - Say Wit With Flowers  - (330ml Bottle)	£3.20	1	£3.20	0.2
+a	Siren - Metafiction  - (330ml Bottle)	£2.60	1	£2.60	0.2
+a	The Kernel - Nelson Sauvin Pale Ale  - (330ml Bottle)	£3.00	1	£3.00	0.2
+a	The Kernel - Pale Ale Centennial  - (330ml Bottle)	£3.00	1	£3.00	0.2
+a	TO ØL - Goliat (Bourbon Edition)  - (375ml Bottle)	£7.20	1	£7.20	0.2
+a	Weird Beard - Little Things that Kill  - (330ml Bottle)	£2.60	1	£2.60	0.2
+aar	Brew York - Imperial Tonkoko  - (330ml Can)	£4.50	3	£13.50	0.2
+ar	Choco Libre  - (330ml Bottle)	£4.20	2	£8.40	0.2
+ar	Mad Hatter - Oktoberfeast  - (330ml Bottle)	£3.00	2	£6.00	0.2
+r	Jackie O's - Elle  - (500ml Bottle)	£10.00	1	£10.00	0.2
+r	Jackie O's - Scrip  - (500ml Bottle)	£10.00	1	£10.00	0.2
+r	Mad Hatter - Sichuan Saison  - (330ml Bottle)	£3.40	1	£3.40	0.2
+r	Mikkeller - SpontanBlackberry  - (375ml Bottle)	£10.00	1	£10.00	0.2
+r	Mikkeller - SpontanBlueberry - (375ml Bottle)	£10.00	1	£10.00	0.2
+r	Mikkeller - SpontanLychee  - (375ml Bottle)	£10.00	1	£10.00	0.2
+r	Tempest - Sour Peach Ale  - (330ml Bottle)	£3.50	1	£3.50	0.2
+r	The Kernel - Biere De Saison Honey w/ Off Color  - (750ml Bottle)	£9.50	1	£9.50	0.2
+r	Wiper & True - Mimosa  - (330ml Bottle)	£2.90	1	£2.90	0.2
