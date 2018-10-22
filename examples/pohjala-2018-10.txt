@@ -1,0 +1,6 @@
+tags	name	qty	total
+ax	Loojang	2	11.67
+xaxxaaaaxxx	MIX	12	45.00
+rax	Põhjala/Stigbergets Lux	6	21.25
+rax	Ülo	6	35.00
+arr	Virmalised	15	43.75
