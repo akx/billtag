@@ -10,8 +10,11 @@ from operator import itemgetter
 def read_tsv(fp):
     headers = []
     for i, line in enumerate(fp):
-        line = line.strip().split('\t')
-        if i == 0:
+        line = line.strip()
+        if not line or line.startswith('#'):
+            continue
+        line = line.split('\t')
+        if not headers:
             headers = line
             continue
         yield dict(zip(headers, line))
