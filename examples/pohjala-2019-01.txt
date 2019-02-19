@@ -1,0 +1,10 @@
+div	tags	name	qty	ign1	ign2	total
+x	ax	Cherry Bänger	4	0.17	0	18.75 
+x	ax	Jing A Early Morning Regrets	2	0.08	0	11.88 
+x	aax	Jõuluöö	6	0.25	0	23.13 
+x	ax	Kolumbus Krisostomus	2	0.08	0	12.50 
+x	ax	Loits	4	0.17	0	23.33 
+x	ax	Must Kuld	4	0.17	0	12.50 
+x	ax	ÖÖ	4	0.17	0	15.00 
+x	ax	Põhjala/Birrificio Italiano Nõmme	2	0.08	0	6.04 
+x	axx	Szechuan Bänger	6	0.25	0	25.00 

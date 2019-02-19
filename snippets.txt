@@ -1,6 +1,18 @@
 
 # Parse Brewdog mail
 
+Inspect the table element that contains the order contents, then `temp1 = $0`.
+
+Then run:
+
+```
+[...temp1.querySelectorAll('tbody>tr')].map((tr)=>[...tr.querySelectorAll('td')].map(td=>td.innerText.replace(/[\n\r]+/g, ' ').trim()).join('\t')).slice(1).join('\n')
+```
+
+Remember to add S&H manually.
+
+# Parse Brewdog mail (old)
+
 Inspect the table element that contains the order contents, then `t = $0`.
 
 Then run:
@@ -8,3 +20,4 @@ Then run:
 ```
 Array.from(t.querySelectorAll('tr')).map((r) => Array.from(r.querySelectorAll('td')).map(c => c.innerText.trim().replace('\n', ' - ')).join('\t')).join('\n')
 ```
+
