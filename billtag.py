@@ -20,18 +20,27 @@ def read_tsv(fp):
         yield dict(zip(headers, line))
 
 
-def parse_decimal(value):
+def parse_decimal(value: str) -> Decimal:
     return Decimal(re.sub(r"[^0-9.,-]+", "", value).replace(",", "."))
 
 
-def fraction_as_decimal(value):
+def fraction_as_decimal(value: Fraction) -> Decimal:
     return Decimal(value.numerator) / Decimal(value.denominator)
 
 
-def process(data, *, rounding=2, currency_multiplier=1, delivery=0, default_discount=0):
+def process(
+    data,
+    *,
+    rounding=2,
+    currency_multiplier=1,
+    delivery=0,
+    default_discount=0,
+    use_price_shares_for_delivery=False,
+):
     by_tag = defaultdict(list)
     total_price = 0
-    tag_shares = Counter()
+    tag_unit_shares = Counter()
+    tag_price_shares = Counter()
     for line in data:
         try:
             qty = int(line["qty"])
@@ -43,7 +52,9 @@ def process(data, *, rounding=2, currency_multiplier=1, delivery=0, default_disc
             line_price = parse_decimal(line["unit"]) * qty
         else:
             raise NotImplementedError("no total or unit in line %r" % line)
-        discount_perc = (parse_decimal(line["discount"]) if "discount" in line else default_discount)
+        discount_perc = (
+            parse_decimal(line["discount"]) if "discount" in line else default_discount
+        )
         if discount_perc > 0:
             discount_mul = 1 - discount_perc
             line_price *= discount_mul
@@ -56,7 +67,9 @@ def process(data, *, rounding=2, currency_multiplier=1, delivery=0, default_disc
         total_tags = sum(tags.values())
         for tag, count in tags.items():
             share = Fraction(count, total_tags)
-            tag_shares[tag] += share * qty
+            split_price = round(Decimal(float(share)) * line_price, rounding)
+            tag_unit_shares[tag] += share * qty
+            tag_price_shares[tag] += split_price
             by_tag[tag].append(
                 {
                     "line": line,
@@ -65,15 +78,23 @@ def process(data, *, rounding=2, currency_multiplier=1, delivery=0, default_disc
                     "total_qty": qty,
                     "split_qty": (share * qty),
                     "total_price": line_price,
-                    "split_price": round(Decimal(float(share)) * line_price, rounding),
+                    "split_price": split_price,
                 }
             )
 
     if delivery != 0:
-        share_total = sum(tag_shares.values())
+        if use_price_shares_for_delivery:
+            # When using price shares, simplify the decimal prices up to fractions
+            delivery_share_map = {
+                tag: Fraction(int(cnt)) for (tag, cnt) in tag_price_shares.items()
+            }
+        else:
+            delivery_share_map = tag_unit_shares
+
+        share_total = sum(delivery_share_map.values())
         delivery *= currency_multiplier
         total_price += delivery
-        for tag, share in tag_shares.items():
+        for tag, share in delivery_share_map.items():
             share /= share_total
             by_tag[tag].append(
                 {
@@ -88,7 +109,6 @@ def process(data, *, rounding=2, currency_multiplier=1, delivery=0, default_disc
             )
 
     return {
-        "tag_shares": tag_shares,
         "by_tag": by_tag,
         "total_price": total_price,
         "total_split_price": sum(i["split_price"] for i in chain(*by_tag.values())),
@@ -138,6 +158,11 @@ def main():
         type=parse_decimal,
         help="set default discount for lines that set none",
     )
+    ap.add_argument(
+        "--use-price-shares-for-delivery",
+        default=False,
+        action="store_true",
+    )
 
     args = ap.parse_args()
     with open(args.input) as infp:
@@ -148,6 +173,7 @@ def main():
         currency_multiplier=args.currency_multiplier,
         delivery=args.delivery,
         default_discount=args.default_discount,
+        use_price_shares_for_delivery=args.use_price_shares_for_delivery,
     )
     print_itemization(processed)
     print("[>] Total price: %s" % processed["total_split_price"])
