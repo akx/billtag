@@ -28,7 +28,7 @@ def fraction_as_decimal(value):
     return Decimal(value.numerator) / Decimal(value.denominator)
 
 
-def process(data, rounding=2, currency_multiplier=1, delivery=0):
+def process(data, *, rounding=2, currency_multiplier=1, delivery=0, default_discount=0):
     by_tag = defaultdict(list)
     total_price = 0
     tag_shares = Counter()
@@ -43,8 +43,9 @@ def process(data, rounding=2, currency_multiplier=1, delivery=0):
             line_price = parse_decimal(line["unit"]) * qty
         else:
             raise NotImplementedError("no total or unit in line %r" % line)
-        if "discount" in line:
-            discount_mul = 1 - parse_decimal(line["discount"])
+        discount_perc = (parse_decimal(line["discount"]) if "discount" in line else default_discount)
+        if discount_perc > 0:
+            discount_mul = 1 - discount_perc
             line_price *= discount_mul
         line_price *= currency_multiplier
         if line_price == 0:
@@ -131,6 +132,13 @@ def main():
         type=parse_decimal,
         help="add total delivery (in foreign currency), weighted by line total",
     )
+    ap.add_argument(
+        "--default-discount",
+        default=0,
+        type=parse_decimal,
+        help="set default discount for lines that set none",
+    )
+
     args = ap.parse_args()
     with open(args.input) as infp:
         data = list(read_tsv(infp))
@@ -139,6 +147,7 @@ def main():
         rounding=args.rounding,
         currency_multiplier=args.currency_multiplier,
         delivery=args.delivery,
+        default_discount=args.default_discount,
     )
     print_itemization(processed)
     print("[>] Total price: %s" % processed["total_split_price"])
