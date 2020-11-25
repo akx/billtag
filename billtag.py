@@ -115,7 +115,7 @@ def process(
     }
 
 
-def print_itemization(processed):
+def print_itemization(processed, decimal_width):
     for tag, tag_items in sorted(processed["by_tag"].items()):
         total_price = sum(item["split_price"] for item in tag_items)
         total_qty = sum(item["split_qty"] for item in tag_items)
@@ -129,11 +129,12 @@ def print_itemization(processed):
         name_len = max(len(item["name"]) for item in tag_items)
         for item in sorted(tag_items, key=itemgetter("name")):
             print(
-                "%-*s | %6s | %6s"
+                "%-*s | %6s | %*s"
                 % (
                     name_len,
                     item["name"],
                     item["split_qty"],
+                    decimal_width,
                     item["split_price"],
                 )
             )
@@ -175,7 +176,7 @@ def main():
         default_discount=args.default_discount,
         use_price_shares_for_delivery=args.use_price_shares_for_delivery,
     )
-    print_itemization(processed)
+    print_itemization(processed, decimal_width=args.rounding + 4)
     print("[>] Total price: %s" % processed["total_split_price"])
     rounding_remainder = processed["total_price"] - processed["total_split_price"]
     if rounding_remainder:
